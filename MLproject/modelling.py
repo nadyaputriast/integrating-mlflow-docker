@@ -34,9 +34,11 @@ if __name__ == "__main__":
         mlflow.sklearn.log_model(
         sk_model=model,
         artifact_path="model",
-        input_example=input_example
+        input_example=input_example,
+        conda_env=os.path.join(os.path.dirname(__file__), "conda.yaml")
         )
         model.fit(X_train, y_train)
         # Log metrics
         accuracy = model.score(X_test, y_test)
+
         mlflow.log_metric("accuracy", accuracy)
