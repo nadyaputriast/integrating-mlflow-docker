@@ -13,7 +13,7 @@ on:
       - '.github/**'
 
 env:
-  CSV_URL: "MLproject/train_pca.csv"
+  CSV_URL: "train_pca.csv"
   TARGET_VAR: "Credit_Score"
   IMAGE_NAME: "cc"
 
