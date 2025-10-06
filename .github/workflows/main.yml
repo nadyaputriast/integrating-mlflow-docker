@@ -65,5 +65,5 @@ jobs:
 
       - name: Tag & Push Docker Image
         run: |
-          docker tag "$IMAGE_NAME:latest" "${{ secrets.DOCKER_HUB_USERNAME }}/${IMAGE_NAME}:latest"
+          docker tag "${IMAGE_NAME}:latest" "${{ secrets.DOCKER_HUB_USERNAME }}/${IMAGE_NAME}:latest"
           docker push "${{ secrets.DOCKER_HUB_USERNAME }}/${IMAGE_NAME}:latest"
